@@ -138,7 +138,6 @@ function processProduct(num1, num2, callback) {
  * should return "sad".
 */
 function processContains(item, list, callback) {
-  return callback();
 
 
 }
@@ -185,11 +184,11 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 function getFullNames(runners) {
-  let FullNames = [];
-  runners.forEach(runners => {
-    FullNames.push('runner.last_name, runner.last_name');
+  let fullNames = [];
+  runners.forEach((runner) => {
+    fullNames.push ('${runner.last_name}, ${runner.first_name}');
   });
-  return FullNames;
+  return fullNames;
 }
 
 /**
@@ -226,10 +225,10 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
-  let runnerShirt = [];
-  runners.filter
-
-  }
+  var tShirtSize = runners.filter(function(runner){
+    return runner.shirt_size === tShirtSize; 
+  });
+  return tShirtSize;
 }
 
 
